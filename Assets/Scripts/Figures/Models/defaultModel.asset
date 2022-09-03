@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680edc640ae115498db81bf0b74a905, type: 3}
+  m_Name: defaultModel
+  m_EditorClassIdentifier: 
+  _model: {fileID: -6779180825468486696, guid: d941199d4a58fcb45adc75ea8e37c42c, type: 3}
+  _label: {fileID: 1266511897, guid: 44f7d4c2f8ad743408a0bdbe99fc3a50, type: 3}
+  _name: Slime
+  _price: 0
+  _isSelect: 1
+  _isBuy: 1
