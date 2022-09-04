@@ -25,11 +25,9 @@ public class FigureModel : ScriptableObject
 
     public void TrySelect()
     {
-        if (_isBuy)
-        {
-            _isSelect = true;
-            Selected?.Invoke(this);
-        }
+        if (_isBuy == false) return;
+        _isSelect = true;
+        Selected?.Invoke(this);
     }
 
     public void RemoveSelect()

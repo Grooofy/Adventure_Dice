@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -6,16 +7,19 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private DiceCheckZone _zone;
-    
+    [SerializeField] private LoadingScreen _loadingScreen;
+
     public event UnityAction GameStarted;
     public event UnityAction GameOvered;
-    
+
     private Player _player;
     private Wallet _wallet;
+    private float _delayLoadingScreen = 0.20f;
+
 
     private void OnEnable()
     {
-        _player.TurnsEnded += GameOver; 
+        _player.TurnsEnded += GameOver;
     }
 
     private void OnDisable()
@@ -27,6 +31,11 @@ public class GameController : MonoBehaviour
     {
         _player = GetComponent<Player>();
         _wallet = GetComponentInChildren<Wallet>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(_loadingScreen.Loading(_delayLoadingScreen));
     }
 
     public void PauseGame()
@@ -61,7 +70,4 @@ public class GameController : MonoBehaviour
         _zone.gameObject.SetActive(false);
         GameOvered?.Invoke();
     }
-
-
-
 }
