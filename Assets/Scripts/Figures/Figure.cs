@@ -17,7 +17,6 @@ public class Figure : MonoBehaviour
     public event UnityAction Jumping;
 
 
-    private Coroutine _jumping;
     private SphereCollider _collider;
     private float _jumpForse = 1;
     
@@ -39,17 +38,7 @@ public class Figure : MonoBehaviour
     private void Jump(int number)
     {
         _collider.enabled = false;
-        
-        if (_jumping == null)
-        {
-            _jumping = StartCoroutine(JumpIn(number));
-            _jumping = null;
-        }
-        else
-        {
-            StopCoroutine(_jumping);
-        }
-       
+        StartCoroutine(JumpIn(number));
     }
 
     public void TakeCoins(int coinCount)

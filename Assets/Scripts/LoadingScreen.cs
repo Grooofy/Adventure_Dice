@@ -1,15 +1,18 @@
 using System.Collections;
 using UnityEngine;
-using Slider = UnityEngine.UI.Slider;
+using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour
 {
     private Slider _slider;
     private float _sliderChange = 0.2f;
+    private Animator _animator;
+    private const string Play = "Play";
 
     private void Awake()
     {
         _slider = GetComponentInChildren<Slider>();
+        _animator = GetComponent<Animator>();
     }
     
     public IEnumerator Loading(float delay)
@@ -21,7 +24,12 @@ public class LoadingScreen : MonoBehaviour
             _slider.value += _sliderChange;
             yield return seconds;
         }
-        gameObject.SetActive(false);
+        _slider.gameObject.SetActive(false);
+        ChangeColor();
     }
 
+    private void ChangeColor()
+    {
+        _animator.SetTrigger(Play);
+    }
 }
