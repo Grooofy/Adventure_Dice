@@ -1,13 +1,16 @@
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine.Events;
+using static UnityEngine.Mathf;
 
 
 [RequireComponent(typeof(SphereCollider))]
 public class Figure : MonoBehaviour
 {
     [SerializeField] private DiceCheckZone _checkZone;
+    [SerializeField] private AudioSource _audioSource;
     
     public event UnityAction<int> ChangedDiceNumber;
     public event UnityAction<int> TakenCoin;
@@ -65,12 +68,13 @@ public class Figure : MonoBehaviour
         while (number > 0)
         {
             Jumping?.Invoke();
-            transform.DOJump(transform.position + Vector3.right * distance, _jumpForse, numJumps, duration);
+            _audioSource.Play();
+            transform.DOJump( new Vector3( transform.position.x + distance, transform.position.y, transform.position.z), _jumpForse, numJumps, duration);
             ChangedDiceNumber?.Invoke(number);
-            yield return new WaitForSeconds(duration);
             number--;
+            yield return new WaitForSeconds(duration);
         }
-
+        
         _collider.enabled = true;
         JumpingStopped?.Invoke();
     }

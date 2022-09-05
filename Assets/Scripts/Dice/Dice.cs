@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,13 +7,19 @@ using Random = UnityEngine.Random;
 public class Dice : MonoBehaviour
 {
     [SerializeField] private List<DiceModel> _models;
+    [SerializeField] private AudioSource _audioSource;
 
     private Rigidbody _rigidbody;
     private Vector3 _startPoint;
 
+
     private const float _powerThrow = 500f;
 
-    private void Awake() => _rigidbody = GetComponent<Rigidbody>();
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    } 
+       
 
     private void Start()
     {
@@ -44,5 +49,11 @@ public class Dice : MonoBehaviour
     private void CreateModel()
     {
         Instantiate(_models[0].Dice, transform.position, transform.rotation, transform);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider == null) return;
+        _audioSource.Play();
     }
 }

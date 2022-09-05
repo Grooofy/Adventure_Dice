@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour
 {
+    [SerializeField] private AudioSource _mainSound;
     private Slider _slider;
     private float _sliderChange = 0.2f;
     private Animator _animator;
@@ -26,6 +27,7 @@ public class LoadingScreen : MonoBehaviour
         }
         _slider.gameObject.SetActive(false);
         ChangeColor();
+        _mainSound.Play();
     }
 
     private void ChangeColor()

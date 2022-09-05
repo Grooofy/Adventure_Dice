@@ -122,7 +122,7 @@ TextureImporter:
         x: 0
         y: 154
         width: 653
-        height: 525
+        height: 460
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

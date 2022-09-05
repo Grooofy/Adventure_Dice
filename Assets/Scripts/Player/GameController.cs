@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private DiceCheckZone _zone;
     [SerializeField] private LoadingScreen _loadingScreen;
+   
 
     public event UnityAction GameStarted;
     public event UnityAction GameOvered;

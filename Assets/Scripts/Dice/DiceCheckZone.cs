@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,9 +25,9 @@ public class DiceCheckZone : MonoBehaviour
             _sides.Remove(side);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (_sides.Count == 2)
+        if (_sides.Count > 1)
             FindOutNumbers();
     }
 
@@ -34,16 +35,17 @@ public class DiceCheckZone : MonoBehaviour
     {
         if (CheckNumbers(_sides))
             CheckingNumber?.Invoke();
-
+        
         _sumNumbers = _sides.Sum(side => side.Number);
+        _sides.Clear();
         CheckedDice?.Invoke(_sumNumbers);
         _sumNumbers = 0;
-        _sides.Clear();
+        gameObject.SetActive(false);
     }
 
-    private bool CheckNumbers(List<Side> _sides)
+    private bool CheckNumbers(List<Side> sides)
     {
-        return _sides[0].Number == _sides[1].Number;
+        return sides[0].Number == sides[1].Number;
     }
 
 }
