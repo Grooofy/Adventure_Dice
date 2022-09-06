@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Defalt
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 08dcd6072c71fe946a8fc0625f2f1648, type: 2}
+  _particleSystem: {fileID: 360309465287304699, guid: 28f52b973fe27454c9ea62212d501bff, type: 3}
+  _audioSource: {fileID: 7071411919017735745, guid: cf2e201d6192b0a459b2c27ba477a64e, type: 3}

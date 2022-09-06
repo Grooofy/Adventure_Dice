@@ -2,8 +2,15 @@ using UnityEngine;
 
 public class PropertiesCubes : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _particleSystem;
-    [SerializeField] private AudioSource _audioSource;
+    private ParticleSystem _particleSystem;
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        _particleSystem = GetComponentInChildren<ParticleSystem>();
+        _audioSource = GetComponentInChildren<AudioSource>();
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
