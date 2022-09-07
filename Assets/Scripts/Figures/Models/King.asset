@@ -17,4 +17,4 @@ MonoBehaviour:
   _name: King
   _price: 1
   _isSelect: 0
-  _isBuy: 1
+  _isBuy: 0
