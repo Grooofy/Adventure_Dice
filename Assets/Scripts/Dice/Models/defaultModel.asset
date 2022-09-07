@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9558e2153c43b8e449bf49b98d646f35, type: 3}
   m_Name: defaultModel
   m_EditorClassIdentifier: 
-  _diceModel: {fileID: 9101665397634043156, guid: f2ad63d2953c3134d875c23d557c21ee, type: 3}
-  _isBuy: 1
+  _diceModel: {fileID: 7838082222961765739, guid: 43acca86d500f10418d3f14fd9ad31aa, type: 3}
