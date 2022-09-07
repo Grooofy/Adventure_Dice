@@ -6,15 +6,9 @@ public class FigureView : MonoBehaviour
 
     private Model _figure;
 
-    private void OnEnable()
-    {
-        _inventory.ModelSelect += ShowModel;
-    }
+    private void OnEnable() => _inventory.ModelSelect += ShowModel;
 
-    private void OnDisable()
-    {
-        _inventory.ModelSelect -= ShowModel;
-    }
+    private void OnDisable()=> _inventory.ModelSelect -= ShowModel;
 
     private void ShowModel(FigureModel figureModel)
     {

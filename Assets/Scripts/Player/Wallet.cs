@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class Wallet : MonoBehaviour
 {
@@ -9,15 +8,13 @@ public class Wallet : MonoBehaviour
 
     public event UnityAction<int> CoinsCountChanged;
     public event UnityAction<int> AllCoinsCountChanged;
-   
 
     private const int MultiplyCoins = 2;
     private const string Coins = "Coins";
     private const string WordAllCoins = "AllCoins";
 
     public int AllNumberCoins => _allNumberCoins;
-
-
+    
     private void OnEnable()
     {
         LoadWallet();
@@ -39,6 +36,7 @@ public class Wallet : MonoBehaviour
     {
         _allNumberCoins -= count;
         AllCoinsCountChanged?.Invoke(_allNumberCoins);
+        
         SaveWallet();
     }
 

@@ -35,14 +35,7 @@ public class Turn : MonoBehaviour
         _tmp.text = number.ToString();
     }
 
-    private void PlayAnimation()
-    {
-        _animator.SetTrigger(AnimationTrigger);
-    }
+    private void PlayAnimation() => _animator.SetTrigger(AnimationTrigger);
 
-    private void ShowEndTurns()
-    {
-        _tmp.text = TurnsOver;
-    }
-
+    private void ShowEndTurns() => _tmp.text = TurnsOver;
 }

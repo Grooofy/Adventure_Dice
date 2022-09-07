@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public static class SaveManager
 {
-
     public static void SaveGame(FigureModel figureModel, string fileName)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -32,9 +30,6 @@ public static class SaveManager
 
             return data;
         }
-        else
-        {
-            return null;
-        }
+        return null;
     }
 }

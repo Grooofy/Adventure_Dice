@@ -22,8 +22,7 @@ public class Inventory : MonoBehaviour
         _shop.ListCompleted -= InitializeSelectModel;
         _shop.SelectModelChanged -= SetNewModel;
     }
-
-
+    
     private void InitializeSelectModel(List<FigureModel> figureModels)
     {
         foreach (var model in figureModels.Where(model => model.IsSelect))

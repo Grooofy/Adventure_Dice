@@ -18,13 +18,7 @@ public class Model : MonoBehaviour
         _figure.Jumping -= PlayAnimation;
     }
     
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
+    private void Awake() => _animator = GetComponent<Animator>();
 
-    private void PlayAnimation()
-    {
-        _animator.SetTrigger(AnimationTrigger);
-    }
+    private void PlayAnimation() => _animator.SetTrigger(AnimationTrigger);
 }

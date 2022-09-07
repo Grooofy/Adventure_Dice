@@ -24,10 +24,7 @@ public class Coins : MonoBehaviour
     {
         PlayAnimation();
         _tmp.text = number.ToString();
-    }        
-
-    private void PlayAnimation()
-    {
-        _animator.SetTrigger(AnimationTrigger);
     }
+
+    private void PlayAnimation() => _animator.SetTrigger(AnimationTrigger);
 }

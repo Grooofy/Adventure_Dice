@@ -4,8 +4,8 @@ using TMPro;
 [RequireComponent(typeof(TextMeshPro))]
 public class DiceNumber : MonoBehaviour
 {
-    [SerializeField] private Figure _figure; 
-    
+    [SerializeField] private Figure _figure;
+
     private TMP_Text _tmp;
 
     private void OnEnable()
@@ -30,8 +30,5 @@ public class DiceNumber : MonoBehaviour
         _tmp.text = number.ToString();
     }
 
-    private void HideNumber()
-    {
-        _tmp.enabled = false;
-    }
+    private void HideNumber() => _tmp.enabled = false;
 }

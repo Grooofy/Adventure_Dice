@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private List<Dice> _dices;
     [SerializeField] private Figure _figure;
-
     [SerializeField] private int _turns;
 
     public event UnityAction<int> TurnsChanged;
@@ -16,8 +15,6 @@ public class Player : MonoBehaviour
     private GameController _gameController;
     private Wallet _wallet;
     private CircleCollider2D _collider;
-
-    public int Turns => _turns;
 
     private void OnEnable()
     {
@@ -63,6 +60,7 @@ public class Player : MonoBehaviour
     {
         _turns--;
         TurnsChanged?.Invoke(_turns);
+        
         FindHowManyTurns(_turns);
     }
 
@@ -80,6 +78,7 @@ public class Player : MonoBehaviour
     {
         _turns += turnsCount;
         TurnsChanged?.Invoke(_turns);
+        
         FindHowManyTurns(_turns);
     }
 

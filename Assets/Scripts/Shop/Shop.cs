@@ -46,7 +46,9 @@ public class Shop : MonoBehaviour
                 _buyModels.Add(item);
 
         ListCompleted?.Invoke(_buyModels);
+        
         AddListenersSelectModels(_buyModels);
+        
         SaveModels();
     }
 
@@ -77,12 +79,14 @@ public class Shop : MonoBehaviour
     private void TurnOffSelectedModel(FigureModel figureModel)
     {
         SelectModelChanged?.Invoke(figureModel);
+        
         SaveModels();
     }
 
     private void BuyModel(FigureModel figureModel)
     {
         _wallet.RemoveCoins(figureModel.Price);
+        
         AddBuyModels();
     }
 

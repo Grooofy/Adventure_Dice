@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,10 +25,9 @@ public class InteractionUI : MonoBehaviour
         _reloadButton.onClick.RemoveListener(PressButtonReload);
     }
 
-    private void TurnOnButtonReload()
-    {
-        _reloadButton.gameObject.SetActive(true);
-    }
+    private void TurnOnButtonReload() => _reloadButton.gameObject.SetActive(true);
+
+    private void PressButtonReload() => _gameController.ReloadGame();
 
     private void PressButtonInventory(ShopPanel inventory)
     {
@@ -44,10 +41,5 @@ public class InteractionUI : MonoBehaviour
             inventory.gameObject.SetActive(false);
             _gameController.TurnOffPause();
         }
-    }
-
-    private void PressButtonReload()
-    {
-        _gameController.ReloadGame();
     }
 }

@@ -30,8 +30,6 @@ public class LoadingScreen : MonoBehaviour
         _mainSound.Play();
     }
 
-    private void ChangeColor()
-    {
-        _animator.SetTrigger(Play);
-    }
+    private void ChangeColor() => _animator.SetTrigger(Play);
+        
 }

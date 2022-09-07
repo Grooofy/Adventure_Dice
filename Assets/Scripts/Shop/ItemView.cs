@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Events;
+
 
 public class ItemView : MonoBehaviour
 {
@@ -13,10 +13,7 @@ public class ItemView : MonoBehaviour
 
     private FigureModel _figureModel;
     private Shop _shop;
-    public Button Select => _sellect;
-    public Button Buy => _buy;
-
-
+    
     private void OnEnable()
     {
         _shop = GetComponentInParent<Shop>();
@@ -55,20 +52,11 @@ public class ItemView : MonoBehaviour
         }
     }
 
-    private void TurnOffButton(Button button)
-    {
-        button.interactable = false;
-    }
+    private void TurnOffButton(Button button) => button.interactable = false;
 
-    private void TurnOnButton()
-    {
-        _sellect.interactable = true;
-    }
+    private void TurnOnButton() => _sellect.interactable = true;
 
-    private void SelectModel()
-    {
-        _figureModel.TrySelect();
-    }
+    private void SelectModel() => _figureModel.TrySelect();
 
     private void TryBuyModel(int coins)
     {
