@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Rigidbody))]
 public class Dice : MonoBehaviour
 {
-    [SerializeField] private List<DiceModel> _models;
+    [SerializeField] private DiceModel _model;
     [SerializeField] private AudioSource _audioSource;
 
     private Rigidbody _rigidbody;
@@ -48,7 +48,7 @@ public class Dice : MonoBehaviour
 
     private void CreateModel()
     {
-        Instantiate(_models[0].Dice, transform.position, transform.rotation, transform);
+        Instantiate(_model.Dice, transform.position, transform.rotation, transform);
     }
 
     private void OnCollisionEnter(Collision collision)
