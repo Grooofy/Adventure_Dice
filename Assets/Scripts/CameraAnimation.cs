@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class CameraAnimation : MonoBehaviour
 {
     [SerializeField] private DiceCheckZone _zone;

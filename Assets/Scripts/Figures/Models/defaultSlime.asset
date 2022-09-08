@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680edc640ae115498db81bf0b74a905, type: 3}
-  m_Name: defaultModel
+  m_Script: {fileID: 11500000, guid: 46e4b74be1582a24ea0403bb8f974612, type: 3}
+  m_Name: defaultSlime
   m_EditorClassIdentifier: 
   _model: {fileID: -6779180825468486696, guid: d941199d4a58fcb45adc75ea8e37c42c, type: 3}
   _label: {fileID: 1266511897, guid: 44f7d4c2f8ad743408a0bdbe99fc3a50, type: 3}

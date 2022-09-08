@@ -1,7 +1,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Rotate : MonoBehaviour
+public class Rotator : MonoBehaviour
 {
     private float _speed;
 

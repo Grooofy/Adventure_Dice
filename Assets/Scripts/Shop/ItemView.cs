@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-
 public class ItemView : MonoBehaviour
 {
     [SerializeField] private Image _label;
@@ -11,7 +10,7 @@ public class ItemView : MonoBehaviour
     [SerializeField] private Button _sellect;
     [SerializeField] private Button _buy;
 
-    private FigureModel _figureModel;
+    private ProductCard _figureModel;
     private Shop _shop;
     
     private void OnEnable()
@@ -33,7 +32,7 @@ public class ItemView : MonoBehaviour
         _figureModel.SelectedBuy -= Render;
     }
 
-    public void Render(FigureModel figureModel)
+    public void Render(ProductCard figureModel)
     {
         _figureModel = figureModel;
         _label.sprite = figureModel.Label;

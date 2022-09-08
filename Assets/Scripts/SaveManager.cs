@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class SaveManager
 {
-    public static void SaveGame(FigureModel figureModel, string fileName)
+    public static void SaveGame(ProductCard figureModel, string fileName)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         string path = Application.persistentDataPath + fileName;

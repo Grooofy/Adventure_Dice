@@ -2,10 +2,7 @@ using UnityEngine;
 
 public class TurnDownCube : PropertiesCubes
 {
-    [SerializeField] private int _turnCount;
+    private int _turnCount = -3;
 
-    protected override void UseCube(Figure figure)
-    {
-        figure.ChangeTurns(_turnCount);
-    }
+    protected override void UseCube(Figure figure) => figure.ChangeTurns(_turnCount);
 }

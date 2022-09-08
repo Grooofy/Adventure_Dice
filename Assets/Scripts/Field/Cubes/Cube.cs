@@ -4,7 +4,6 @@
 public class Cube : ScriptableObject
 {
     [SerializeField] private Material _material;
-    
 
     public Material Material => _material;
   

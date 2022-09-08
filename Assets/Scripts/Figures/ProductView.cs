@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FigureView : MonoBehaviour
+public class ProductView : MonoBehaviour
 {
     [SerializeField] private Inventory _inventory;
 
@@ -8,9 +8,9 @@ public class FigureView : MonoBehaviour
 
     private void OnEnable() => _inventory.ModelSelect += ShowModel;
 
-    private void OnDisable()=> _inventory.ModelSelect -= ShowModel;
+    private void OnDisable() => _inventory.ModelSelect -= ShowModel;
 
-    private void ShowModel(FigureModel figureModel)
+    private void ShowModel(ProductCard figureModel)
     {
         if (_figure != null)
             Destroy(_figure.gameObject);

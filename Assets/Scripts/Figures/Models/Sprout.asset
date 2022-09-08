@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680edc640ae115498db81bf0b74a905, type: 3}
+  m_Script: {fileID: 11500000, guid: 46e4b74be1582a24ea0403bb8f974612, type: 3}
   m_Name: Sprout
   m_EditorClassIdentifier: 
   _model: {fileID: -4196352306847143961, guid: 8760cc9eb30a2b340b14499b6e150dc4, type: 3}
   _label: {fileID: 639547090, guid: c3bfdf0a356708441a925c4f75aef128, type: 3}
   _name: Sprout
-  _price: 1
+  _price: 10
   _isSelect: 0
   _isBuy: 0

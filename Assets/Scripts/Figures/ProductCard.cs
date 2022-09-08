@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "new figure", menuName = "FigureModel", order = 53)]
-public class FigureModel : ScriptableObject
+[CreateAssetMenu(fileName = "new productCard", menuName = "ProductCard", order = 53)]
+public class ProductCard : ScriptableObject
 {
     [SerializeField] private Model _model;
     [SerializeField] private Sprite _label;
@@ -11,9 +11,9 @@ public class FigureModel : ScriptableObject
     [SerializeField] private bool _isSelect;
     [SerializeField] private bool _isBuy;
 
-    public event UnityAction<FigureModel> Selected;
-    public event UnityAction<FigureModel> NotSelected;
-    public event UnityAction<FigureModel> SelectedBuy;
+    public event UnityAction<ProductCard> Selected;
+    public event UnityAction<ProductCard> NotSelected;
+    public event UnityAction<ProductCard> SelectedBuy;
 
     public Model Model => _model;
     public Sprite Label => _label;

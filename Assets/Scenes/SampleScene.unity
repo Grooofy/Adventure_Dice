@@ -515,7 +515,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.58579236, y: 1}
+    m_SensorSize: {x: 0.5353003, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 98.15
+  m_fontSize: 93.8
   m_fontSizeBase: 83.18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1008,7 +1008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6698678, y: 0.934}
   m_AnchorMax: {x: 0.9766199, y: 1}
-  m_AnchoredPosition: {x: 9.829956, y: 13.499908}
+  m_AnchoredPosition: {x: 9.829956, y: 13.499878}
   m_SizeDelta: {x: 30.408295, y: 29.957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223305507
@@ -1611,6 +1611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 533125021}
   - component: {fileID: 533125022}
+  - component: {fileID: 533125026}
   - component: {fileID: 533125023}
   - component: {fileID: 533125024}
   - component: {fileID: 533125025}
@@ -1667,7 +1668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _checkZone: {fileID: 134502664}
-  _audioSource: {fileID: 1765910862}
 --- !u!135 &533125024
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1694,6 +1694,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventory: {fileID: 1228814061}
+--- !u!114 &533125026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533125020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b465966197fc03478ee65a3fa724a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 1765910862}
 --- !u!4 &629010852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 229324464304344201, guid: 265c5af8c139c9d448cd88373e1f7741, type: 3}
@@ -1923,7 +1936,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 188.15
+  m_fontSize: 172.3
   m_fontSizeBase: 110.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2193,7 +2206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.008}
   m_AnchorMin: {x: 0.135, y: 0.1482455}
   m_AnchorMax: {x: 0.78700006, y: 0.41475978}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0.07440567}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0.074401855}
   m_SizeDelta: {x: -1.30903, y: 3.8515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858601998
@@ -2243,7 +2256,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 77
+  m_fontSize: 80.4
   m_fontSizeBase: 57.21
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2413,7 +2426,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.35
+  m_fontSize: 58.6
   m_fontSizeBase: 110.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5265,14 +5278,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _items:
-  - {fileID: 11400000, guid: 565afc7568152a74d8b65a8fe558fa10, type: 2}
-  - {fileID: 11400000, guid: bff51de9958fde943b1310932f4b2286, type: 2}
+  - {fileID: 11400000, guid: 343222dfe00dc4c4c9d82fafb1abe4b8, type: 2}
+  - {fileID: 11400000, guid: 90507da1104152a488b1bf48a9877a95, type: 2}
   - {fileID: 11400000, guid: dc882d403048e514fbf99b086dc915cb, type: 2}
-  - {fileID: 11400000, guid: c96fdfa7492abbc4eb627649386375e8, type: 2}
+  - {fileID: 11400000, guid: 6eb533c813afe9443b1f92b516e52127, type: 2}
   - {fileID: 11400000, guid: 2729bcb6cd0c0124b8067750c5ff0227, type: 2}
-  - {fileID: 11400000, guid: cf247a5e53a381d40ac67f799b04e058, type: 2}
+  - {fileID: 11400000, guid: 59f49e1f79cdc9c4ba259ef9f43de969, type: 2}
   - {fileID: 11400000, guid: 57550d49d6ff16d4c99014aaea2cdd1e, type: 2}
-  - {fileID: 11400000, guid: 9f242e594b3757742849173a25505994, type: 2}
+  - {fileID: 11400000, guid: be6261e90de075a42bfb1ea2653abffd, type: 2}
   _teamplate: {fileID: 3077466343432325909, guid: 105dfce8e3e671e4ba0d5dcd7b08b028, type: 3}
   _conteiner: {fileID: 1973747657}
   _wallet: {fileID: 1865005767}

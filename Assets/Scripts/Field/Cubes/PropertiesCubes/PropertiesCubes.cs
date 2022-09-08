@@ -11,7 +11,6 @@ public class PropertiesCubes : MonoBehaviour
         _audioSource = GetComponentInChildren<AudioSource>();
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out Figure figure) == false) return;

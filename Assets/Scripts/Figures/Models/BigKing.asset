@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680edc640ae115498db81bf0b74a905, type: 3}
+  m_Script: {fileID: 11500000, guid: 46e4b74be1582a24ea0403bb8f974612, type: 3}
   m_Name: BigKing
   m_EditorClassIdentifier: 
   _model: {fileID: 7696021076933355299, guid: 93df5c48d5e021040916b0e984d9b01a, type: 3}
   _label: {fileID: -38985667, guid: c8408c8ed0d6f594c86280da143e6a90, type: 3}
-  _name: Big King
-  _price: 1
+  _name: BigKing
+  _price: 10
   _isSelect: 0
-  _isBuy: 0
+  _isBuy: 1

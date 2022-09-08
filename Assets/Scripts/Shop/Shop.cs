@@ -2,18 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private List<FigureModel> _items;
+    [SerializeField] private List<ProductCard> _items;
     [SerializeField] private ItemView _teamplate;
     [SerializeField] private ShopConteiner _conteiner;
     [SerializeField] private Wallet _wallet;
 
-    public UnityAction<FigureModel> SelectModelChanged;
-    public UnityAction<List<FigureModel>> ListCompleted;
+    public UnityAction<ProductCard> SelectModelChanged;
+    public UnityAction<List<ProductCard>> ListCompleted;
     public int WalletCons => _wallet.AllNumberCoins;
-    private readonly List<FigureModel> _buyModels = new List<FigureModel>();
+    private readonly List<ProductCard> _buyModels = new List<ProductCard>();
 
 
     private void OnEnable()
@@ -52,13 +51,13 @@ public class Shop : MonoBehaviour
         SaveModels();
     }
 
-    private void AddListenersSelectModels(List<FigureModel> buyModels)
+    private void AddListenersSelectModels(List<ProductCard> buyModels)
     {
         foreach (var model in buyModels)
             model.Selected += TurnOffSelectedModel;
     }
 
-    private void RemoveListenersSelectModels(List<FigureModel> buyModels)
+    private void RemoveListenersSelectModels(List<ProductCard> buyModels)
     {
         foreach (var model in buyModels)
             model.Selected -= TurnOffSelectedModel;
@@ -76,14 +75,14 @@ public class Shop : MonoBehaviour
             item.SelectedBuy -= BuyModel;
     }
 
-    private void TurnOffSelectedModel(FigureModel figureModel)
+    private void TurnOffSelectedModel(ProductCard figureModel)
     {
         SelectModelChanged?.Invoke(figureModel);
         
         SaveModels();
     }
 
-    private void BuyModel(FigureModel figureModel)
+    private void BuyModel(ProductCard figureModel)
     {
         _wallet.RemoveCoins(figureModel.Price);
         

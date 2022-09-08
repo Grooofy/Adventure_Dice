@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Animator))]
 public class LoadingScreen : MonoBehaviour
 {
     [SerializeField] private AudioSource _mainSound;

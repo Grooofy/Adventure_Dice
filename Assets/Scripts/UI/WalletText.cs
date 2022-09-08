@@ -1,7 +1,7 @@
-using System;
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(TextMeshPro))]
 public class WalletText : MonoBehaviour
 {
     [SerializeField] private Wallet _wallet;

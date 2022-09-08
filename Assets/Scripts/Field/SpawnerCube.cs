@@ -30,7 +30,7 @@ public class SpawnerCube : PoolObject
 
     private void Update()
     {
-        if (IsCreate())
+        if (IsSpawnPoint())
         {
             _positionX = _positionX + _cubeDistance;
             SetCube();            
@@ -46,6 +46,6 @@ public class SpawnerCube : PoolObject
         }
     }
 
-    private bool IsCreate() => transform.position.x - _positionX >= _cubeDistance;
+    private bool IsSpawnPoint() => transform.position.x - _positionX >= _cubeDistance;
     
 }

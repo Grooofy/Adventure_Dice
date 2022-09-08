@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(TextMeshPro))]
 public class Coins : MonoBehaviour
 {
     [SerializeField] private Wallet _wallet;

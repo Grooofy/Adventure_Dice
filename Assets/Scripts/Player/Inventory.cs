@@ -7,9 +7,9 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private Shop _shop;
 
-    public UnityAction<FigureModel> ModelSelect;
+    public UnityAction<ProductCard> ModelSelect;
 
-    private FigureModel _selectModel;
+    private ProductCard _selectModel;
 
     private void OnEnable()
     {
@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
         _shop.SelectModelChanged -= SetNewModel;
     }
     
-    private void InitializeSelectModel(List<FigureModel> figureModels)
+    private void InitializeSelectModel(List<ProductCard> figureModels)
     {
         foreach (var model in figureModels.Where(model => model.IsSelect))
         {
@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void SetNewModel(FigureModel newModel)
+    private void SetNewModel(ProductCard newModel)
     {
         _selectModel.RemoveSelect();
         _selectModel = newModel;

@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(TextMeshPro))]
 public class Turn : MonoBehaviour
 {
     [SerializeField] private Player _player;
