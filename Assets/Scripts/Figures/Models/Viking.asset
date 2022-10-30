@@ -15,6 +15,6 @@ MonoBehaviour:
   _model: {fileID: -8287715803454829755, guid: 11eed2dfd1329ab4db9e7f27b8e628b7, type: 3}
   _label: {fileID: 1943580054, guid: 12ccdaafdaec065498bb283643e54616, type: 3}
   _name: Viking
-  _price: 15
+  _price: 150
   _isSelect: 0
   _isBuy: 0
