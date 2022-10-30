@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1080 height=1920></canvas>
+      <canvas id="unity-canvas" width=960 height=640></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/buildWeb.loader.js";
       var config = {
-        dataUrl: buildUrl + "/buildWeb.data.gz",
-        frameworkUrl: buildUrl + "/buildWeb.framework.js.gz",
-        codeUrl: buildUrl + "/buildWeb.wasm.gz",
+        dataUrl: buildUrl + "/buildWeb.data.unityweb",
+        frameworkUrl: buildUrl + "/buildWeb.framework.js.unityweb",
+        codeUrl: buildUrl + "/buildWeb.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "GrooofyStudio",
         productName: "Dice_Adventure",
@@ -95,11 +95,11 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1080px";
-        canvas.style.height = "1920px";
+        canvas.style.width = "960px";
+        canvas.style.height = "640px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/buildWeb.jpg.gz') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/buildWeb.jpg.unityweb') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
