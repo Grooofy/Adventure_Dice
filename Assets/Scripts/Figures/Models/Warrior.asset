@@ -17,4 +17,4 @@ MonoBehaviour:
   _name: Warrior
   _price: 15
   _isSelect: 0
-  _isBuy: 0
+  _isBuy: 1

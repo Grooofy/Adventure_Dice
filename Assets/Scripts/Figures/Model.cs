@@ -3,10 +3,10 @@
 [RequireComponent(typeof(Animator))]
 public class Model : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
     private const string AnimationTrigger = "Jump";
 
     private Figure _figure;
-    private Animator _animator;
 
     private void OnEnable()
     {
@@ -19,7 +19,7 @@ public class Model : MonoBehaviour
         _figure.Jumping -= PlayAnimation;
     }
     
-    private void Awake() => _animator = GetComponent<Animator>();
+    //private void Awake() => _animator = GetComponent<Animator>();
 
     private void PlayAnimation() => _animator.SetTrigger(AnimationTrigger);
 }
